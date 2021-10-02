@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 html {
   box-sizing: border-box;
@@ -15,5 +16,85 @@ body {
   text-align: center;
   display: flex;
   align-items: center /*places items in centre vertically*/;
-  justify-content: center;
+  justify-content: center; /*places items in centre horizontally*/
+}
+
+.quote-container {
+  width: auto;
+  max-width: 900px; /*if the quote is big it will wrap the content to the next line*/
+  /*color: #848385;*/
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.quote-text {
+  font-size: 2.75rem; /*we use rem for consistent and responsive design*/
+}
+.long-quote {
+  font-size: 2rem;
+}
+.fa-quote-left,
+.fa-quote-right {
+  font-size: 3rem;
+}
+#quote-author {
+  padding: 10px;
+  font-size: 1.3rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400; /*all the other text has font weight of 700*/
+}
+.button-container {
+  font-size: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-twitter {
+  font-size: 2rem;
+}
+.twitter-button {
+  color: white;
+  background-color: #848385;
+  border-radius: 10px;
+  padding: 0px 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  box-shadow: 0.3rem 0.3rem rgba(121, 121, 121, 0.3);
+}
+.twitter-button:hover {
+  color: #0d7ac2b2;
+}
+.new-quote {
+  background-color: #848385;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 2.5rem;
+  border: none;
+  box-shadow: 0.3rem 0.3rem rgba(121, 121, 121, 0.3);
+}
+.new-quote:hover,
+.twitter-button:hover {
+  filter: brightness(110%);
+}
+.new-quote:active,
+.twitter-button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+/*Media Query for screen visibility in mobile device with less than 1000px of width*/
+
+@media screen and (max-width: 1000px) {
+  .quote-container {
+    margin: auto 15px;
+  }
+  .quote-text {
+    font-size: 1.3rem;
+  }
 }

@@ -76,7 +76,7 @@ body {
   cursor: pointer;
   height: 2.5rem;
   border: none;
-  box-shadow: 0.3rem 0.3rem rgba(121, 121, 121, 0.3);
+  box-shadow: 0.3rem 0.3rem rgba(82, 81, 81, 0.3);
 }
 .new-quote:hover,
 .twitter-button:hover {
@@ -96,5 +96,35 @@ body {
   }
   .quote-text {
     font-size: 1.3rem;
+  }
+}
+
+/*Loader- */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #848385;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
